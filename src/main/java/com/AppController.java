@@ -38,4 +38,11 @@ public class AppController {
         model.addAttribute("info", infoForJsp);
         return "hello";
     }
+    @RequestMapping("library")
+    public String library(ModelMap model){
+        Book[] books = new Book[60];
+        facade.getBooks();
+
+    return "hello";
+    }
 }
